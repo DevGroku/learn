@@ -21,9 +21,9 @@ void test1()
 void test2()
 {
     std::cout << "############ test2" << std::endl;
-    using zeta::f;
-    f();
-    ::f();
+    using zeta::f; // on importe f() du namespace zeta dans ce scope
+    f(); // on utilise le f() importé
+    ::f(); // on appelle f() du scope global
 }
 
 void test3()
@@ -48,6 +48,11 @@ void test4()
         using ::f; // ok 1 f() dans test4{}, 1 f() dans ce scope
         f();
     }
+}
+
+void test5()
+{
+
 }
 
 int main()
