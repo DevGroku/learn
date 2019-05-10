@@ -40,6 +40,14 @@ void test4()
     f();
     using zeta::f;
     f();
+
+    // using ::f; // ambigue zeta::f et ::f importé dans le scope test4{} 2 f() possibles
+    // f();
+
+    {
+        using ::f; // ok 1 f() dans test4{}, 1 f() dans ce scope
+        f();
+    }
 }
 
 int main()
