@@ -34,11 +34,20 @@ void test3()
     ::f();
 }
 
+void test4()
+{
+    std::cout << "############ test4" << std::endl;
+    f();
+    using zeta::f;
+    f();
+}
+
 int main()
 {
     test1();
     test2();
     test3();
+    test4();
 
     return 0;
 }
