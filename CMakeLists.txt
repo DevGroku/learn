@@ -5,3 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(memory memory.cpp)
 add_executable(namespace namespace.cpp)
+add_executable(container container.cpp)
+add_executable(class class.cpp)
